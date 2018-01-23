@@ -1,0 +1,555 @@
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+* {margin: 0; padding: 0;}
+
+html, body {min-height: 100%;}
+
+body {
+	text-align: center;
+	margin:2rem!important;
+	line-height: 10px;
+	bacground:#f2f5f7;
+    background-color: #f2f5f7!important;
+	font-family: 'Merriweather Sans', arial, verdana;
+}
+p {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+.breadcrumb {
+    width:100%;
+	display: inline-flex;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	border-radius: 5px;
+	counter-reset: flag; 
+	padding: 0!important;
+	padding: 0rem 0rem!important;
+    margin-bottom: 0rem!important;
+    list-style: none!important;
+    background-color: #fff!important;
+    border-radius: 0rem!important;
+}
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 60px;
+	color: white;
+    width:50%;
+	padding: 0 10px 0 60px;
+	background: #666;
+	background: linear-gradient(#666, #333);
+	position: relative;
+}
+.breadcrumb a:first-child {
+	padding-left: 46px;
+	border-radius: 5px 0 0 5px; 
+}
+
+.breadcrumb a:last-child {
+	border-radius: 0 5px 5px 0; 
+	padding-right: 20px;
+}
+
+.breadcrumb a.active, .breadcrumb a:hover{
+cursor:auto;
+  
+}
+
+.breadcrumb a.active {
+  border-bottom: 3px solid #43a9f7;
+}
+.flat a.active:before {
+  background:#43a9f7;
+  color: white;
+}
+
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -30px; 
+	width: 60px; 
+	height: 60px;
+	transform: scale(0.707) rotate(45deg);
+	z-index: 1;
+	background: #666;
+	background: linear-gradient(135deg, #666, #333);
+    box-shadow: 1px -1px 0 1px rgba(0, 0, 0, 0.1), 1px -3px 0 0px rgba(255, 255, 255, 0.1);
+	border-radius: 0 5px 0 50px;
+}
+
+.breadcrumb a:last-child:after {
+	content: none;
+}
+
+.breadcrumb a:before {
+	content: counter(flag);
+	counter-increment: flag;
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0px -26px;
+	position: absolute;
+	top: 19px;
+	background: #444;
+	background: linear-gradient(#444, #222);
+	font-weight: bold;
+}
+
+.flat a, .flat a:after {
+	background: #e1e7ed;
+	color: black;
+	transition: all 0.5s;
+}
+.flat a:before {
+	background: #666;
+  color:white;
+	box-shadow: 0 0 0 1px #ccc;
+}
+a:focus, a:hover {
+	text-decoration: none!important;
+}
+.flat a.active, 
+.flat a.active:after{
+	background: #ffffff;
+}
+.form-group {
+    margin-top: 0px!important;
+    margin-bottom: 0!important;
+}
+.fa {
+    color: #43a9f7!important;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 6px;
+    position: relative!important;
+    left: -120px;
+    top: 0px!important;
+}
+input::placeholder {
+  color: #999!important;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.form-rounded {
+border-radius: 7px;
+}
+
+.card-header {
+    background-color: rgba(0,0,0,.0)!important;
+    border-bottom: 0px solid rgba(0,0,0,0)!important;
+}
+.card.card-outline-secondary {
+    border: 0px solid rgba(0,0,0,0)!important;
+}
+.card-body {
+    border: 1px solid rgba(0,0,0,0.15)!important;
+    border-radius: 5px!important;
+    box-shadow: 1px 0px 0 1px rgba(0, 0, 0, 0.1), 1px 0px 0 0px rgba(255, 255, 255, 0.1);
+    padding: 17px;
+    background-color: white;
+    height: 100%;
+}
+
+h6 {
+    font-size: 14px!important;
+    margin-left: -20px!important;
+    color: #999!important;
+    float: left;
+}
+
+.row {
+	margin-right: 15px;
+    margin-left: 15px;
+}
+.row {
+	top: 20px;
+    position: relative;
+}
+#second_row {
+	top: 40px;
+    position: relative;
+}
+.btn-primary {
+    background-color: #43a9f7!important;
+    border-color: #43a9f7!important;
+    width: 165px!important;
+    font-size: 15px!important;
+    height: 52px!important;
+    position: relative;
+    top: 20px;
+    float: left;
+}
+.btn-group-lg>.btn, .btn-lg {
+  border-radius: .2rem!important;
+}
+
+.col-sm-10 {
+	display: inline-flex;
+    top: -13px;
+    left: -52px!important;
+    padding-bottom: 20px;
+}
+
+.form-check {
+	padding-left: 3.25rem;
+    font-size: 14px;
+    color: #999;
+}
+
+.gj-datepicker [role=input] {
+	width: 50%!important;
+    height: 30px!important;
+    border-top: 0px!important;
+    border-left: 0px!important;
+    border-right: 0px!important;
+    left: -45px;
+}
+#startDate {
+    float: left;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    top: 0px;
+}
+#stDay{
+    float: left;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+}
+#endDate {
+    float: left;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    top: -20px;
+}
+.gj-datepicker {
+	top: 0px;
+}
+#specific {
+    position: relative;
+    left: 18px;
+    font-size: 14px;
+    top: -19px;
+    color: #999;
+}
+#ongoing {
+    position: relative;
+    top: -44px;
+    left: 90px;
+    font-size: 14px;
+    color: #999;
+}
+
+#carddate {
+    height: 100%;
+    top: 14px;
+    position: relative;
+}
+#mainpicker {
+    border-right: 1px solid #ccc;
+    top: -18px;
+    left: -15px;
+}
+#genders {
+    height: 79px;	
+}
+#radios {
+    top: 7px;
+}
+.custom-select {
+	width: 100%;
+	border-left: 0px!important;
+	border-right: 0px!important;
+	border-top: 0px!important;
+	color: #999!important;
+	font-size: 15px;
+	background: #fff!important;
+}
+.custom-select:focus {
+	border-color: #ccc!important;
+}
+#arrow .fa {
+    left: -120px;
+    top: -69px!important;
+    border: 0px;
+    pointer-events: none;
+    font-weight: bold;
+}
+#arrow {
+    position: relative;
+    top: 44px;
+    cursor: none;
+    border: 0px;
+    float: right;
+    right: -124px;
+}
+#add_btn p {
+    font-size: 14px!important;
+    font-weight: 600!important;
+    color: #43a9f7;
+    float: left;
+    left: 24px;
+    top: -22px;
+    position: relative;
+}
+#text_area_label{
+	display: none;
+}
+#dates {
+	top: 18px;
+    float: left;
+    left: -70px;
+}
+#skills_btn{
+    left: -4px;
+    top: 34px!important;
+    float: left;
+    font-size: 10px;
+}
+#skill_card {
+	height: 110px;
+}
+
+textarea::placeholder {
+  color: #999!important;
+  font-size: 15px;
+}
+.col-md {
+	width: 210px;
+}
+#enddate {
+    top: 0px;
+    height: 115px;
+}
+#calendar {
+    height: 70px;
+    width: 210px;
+}
+#durationbox {
+    float: left;
+    left: -19px!important;
+    position: relative;
+    top: -21px;
+}
+
+.fa.fa-plus {
+   border: 1px solid transparent;
+}
+
+@media (min-width: 576px) {
+
+	.col-md {
+	    -webkit-flex-basis: 0;
+	    -ms-flex-preferred-size: 0;
+	    flex-basis: 0;
+	    -webkit-box-flex: 1;
+	    -webkit-flex-grow: 1;
+	    -ms-flex-positive: 1;
+	    flex-grow: 1;
+	    max-width: 100%;
+	}
+}
+@media (min-width: 276px) {
+	.col-md {
+	    -webkit-flex-basis: 0!important;
+	    -ms-flex-preferred-size: 0!important;
+	    flex-basis: 0!important;
+	    -webkit-box-flex: 1!important;
+	    -webkit-flex-grow: 1!important;
+	    -ms-flex-positive: 1!important;
+	    flex-grow: 1!important;
+	    max-width: 100%!important;
+	}
+}
+.col-sm-10 {
+	max-width: 100%!important;
+}
+.btn-group-lg>.btn, .btn-lg {
+    padding: 0rem 0rem!important;
+    float: left;
+    left: 15px;
+}
+#nextBtn {
+    top: 53px;
+    left: 0px;
+}
+#ongoingtext {
+    position: relative;
+    font-size: 14px;
+    color: #999;
+    top: 0px;
+    left: 29px;
+    float: left;
+}
+
+#ongoinginput {
+    position: relative;
+    font-size: 14px;
+    color: #999;
+    left: -54px;
+    float: left;
+    top: 4px;
+}
+
+#specifictext {
+    position: relative;
+    font-size: 14px;
+    color: #999;
+    top: 24px;
+    left: -39px;
+}
+#specificinput {
+    position: relative;
+    font-size: 14px;
+    color: #999;
+    top: 24px;
+    left: -120px;
+}
+
+#uniformform {
+    top: 20px;
+}
+#createpackageBtn{
+    top: 50px;
+}
+
+#datecalendar {
+    width: 0px;
+}
+#addedSkill {
+    position: relative;
+    top: 30px;
+    left: -24px;
+    float: left;
+    width: 27%;
+    font-size: 16px;
+}
+#addBtn{
+    background-color: transparent!important;
+    border-color: transparent!important;
+    font-weight: 400;
+    cursor: pointer; 
+    color: #43a9f7!important; 
+    left: -23px; 
+    float: left;
+}
+#addBtn:focus, #addBtn:active {
+    -webkit-box-shadow: 0 0 0 0px rgba(2,117,216,0)!important;
+    box-shadow: 0 0 0 0px rgba(2,117,216,0)!important;
+}
+#skillmenu {
+    position: relative;
+    left: 0px;
+    font-size: 14px;
+    width: 100%;
+    border-bottom-color: #43a9f7!important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    border-radius: 0px!important;
+    color: #999;
+    -webkit-appearance: none;
+}
+
+#textareaerror, #textareawarning {
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    color: red;
+    top: 3px;
+    font-size: 12px;
+}
+#instructionerror, #instructionwarning {
+    position: relative;
+    color: red;
+    top: -81px;
+    font-size: 12px;
+}
+
+#firsttextarea {
+    resize: none;
+    top: -8px;
+    height: 100px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    float: none; 
+    width: 100%; 
+    line-height: 24px!important;
+}
+#address1, #address2, #address3 {
+    width: 100%;    
+    margin-bottom: -15px;
+}
+#addressbox {
+    position: relative;
+    top: -21px;
+} 
+#instructions_text {
+    top: -71px!important;
+    position: relative!important;
+    width: 100%;
+    height: 113px;
+}
+#norequireuni {
+    position: relative;
+    left: -10px;
+}
+#requireuni {
+    position: relative;
+    left: -10px;
+}
+button, input, select, textarea {
+    color: #666;
+}
+span {
+    color: red;
+    font-size: 14px!important;
+}
+#uniformform span {
+    color: #666!important;
+}
+.card.card-outline-secondary {
+    line-height: 0px;
+}
+fieldset {
+    line-height: 20px;
+}
+#ongoingSpecific {
+    top: 10px;
+    position: relative;
+}
+#secondtextarea {
+    height: 99px;
+    line-height: 24px!important;
+}
+#textareaholder {
+    height: 117px;
+    line-height: 24px!important;
+}
+.breadcrumb a:hover:after{
+    background: transparent!important;
+    background: linear-gradient(135deg,#e1e7ed, #e1e7ed)!important;
+}
+#textarea {
+    top: 0px;
+}
+
